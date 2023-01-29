@@ -58,7 +58,7 @@ func withdraw{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     //check if account as funds in this contract
     with_attr error_message("Not sufficient fund") {
         assert_le(amount); //???
-        
+
     } 
     let new_balance = res - amount;
     
@@ -69,7 +69,7 @@ func withdraw{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
 //contract constructor
 @constructor
 func constructor(){syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(){
-  let (contarct) = get_contract_address9();
+  let (contarct) = get_contract_address();
   //initialize the contract with 20
   balance.write(contarct, 20);
   return ();

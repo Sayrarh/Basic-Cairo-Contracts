@@ -6,4 +6,5 @@ lib-path = "lib"
 main = ["src/main.cairo"]
 state = ["src/state.cairo"]
 mapping = ["src/state.cairo"]
+student = ["src/student.cairo"]
 
