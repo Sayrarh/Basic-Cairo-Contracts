@@ -3,17 +3,25 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.math import (assert_nn, assert_not_zero, assert_le)
 from starkware.starknet.common.syscalls import (get_caller_address, get_contract_address)
 
-//A simple bank contract/program
 
 //A mapping that stores users funds
 @storage_var
 func balance(account: felt) -> (res: felt) {
 }
 
+//contract constructor
+@constructor
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(){
+  let (contarct) = get_contract_address();
+  //initialize the contract with 20
+  balance.write(contarct, 20);
+  return ();
+}
+
 //let's write to the balance mapping 
 @external
 func increase_mybal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    amount: felt*
+    amount: felt
 ) {
   let (caller) = get_caller_address(); //msg.sender
    //require that the amount being passed in is greater than zero
@@ -25,30 +33,31 @@ func increase_mybal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_
     } 
   //get the balance of the user/account
   let (res) = balance.read(caller);
-  balance.write(res + amount);
+  balance.write(caller, res + amount);
   return ();
 }
 
 //view your balance
 @view
-func get_balance{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (res: felt*){
-   let (caller) = get_caller_address();
-   balance.read(caller);
-
-   return ();
-}
-
-//OR can pass in the account's address manually
-@view
-func view_bal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(account: felt) -> (res: felt*){
+func view_bal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(account: felt) -> (res: felt){
   let (res) = balance.read(account);
   return (res, );
 }
 
+//OR 
+// @view
+// func get_balance{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() -> (res: felt){
+//    let (caller) = get_caller_address();
+//    let(res) = balance.read(caller);
+
+//    return (res,);
+// }
+
+
 //function to withdraw
 @external
 func withdraw{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    account: felt, amount: felt*
+    account: felt, amount: felt
 ) {
     let (res) = balance.read(account);
     
@@ -57,20 +66,12 @@ func withdraw{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     }
     //check if account as funds in this contract
     with_attr error_message("Not sufficient fund") {
-        assert_le(amount); //???
+        assert_le(amount, res); //???
 
-    } 
+   } 
     let new_balance = res - amount;
     
     balance.write(account, amount);// want to write to transfer??
     return ();
 }
 
-//contract constructor
-@constructor
-func constructor(){syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(){
-  let (contarct) = get_contract_address();
-  //initialize the contract with 20
-  balance.write(contarct, 20);
-  return ();
-}

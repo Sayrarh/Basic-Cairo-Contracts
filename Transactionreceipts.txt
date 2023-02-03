@@ -1,10 +1,58 @@
-State.cairo receipts
+///////////////CLASS HASH FOR ALL CONTRACTS////////////
+Building projects' contracts                                                          
+Class hash for contract "state": 0x1aa19941b390ddbbd1743d462573e4c09f982fcf3a0dfa29032cbf1d3f73f1c
+Class hash for contract "bank": 0x5e0590247b68b96d587ec41bb01fc04beaa9b4f4f5f02a0daf55ccfd4800926
+Class hash for contract "student": 0x51dd2a2c7d2e4cf431dfe085e0a1dcd8944028eae41ca4f584244ad72107a6e
 
-Contract address: 0x018d072fdd562bea03d2e583ba151d00dba2e5ff62a092a77ed97bb4c98c2360
-StarkScan https://testnet.starkscan.co/contract/0x018d072fdd562bea03d2e583ba151d00dba2e5ff62a092a77ed97bb4c98c2360
-Voyager   https://goerli.voyager.online/contract/0x018d072fdd562bea03d2e583ba151d00dba2e5ff62a092a77ed97bb4c98c2360
 
-Transaction hash: 3426398044273219172022569375070405917420976266188623029082856475152935082766
-StarkScan https://testnet.starkscan.co/tx/0x079345c70155d1f3fc2ca6aadfb5cad82c5d389a0cc88767e95f75dea6ccdb0e
-Voyager   https://goerli.voyager.online/tx/0x079345c70155d1f3fc2ca6aadfb5cad82c5d389a0cc88767e95f75dea6ccdb0e
+////////////////STATE.CAIRO RECEIPTS///////////////
 
+Contract address: 0x03b1830a4caa6fff6c2c2351419d3d97c449d83ef0979b33d6e558baf5351e93
+StarkScan https://testnet.starkscan.co/contract/0x03b1830a4caa6fff6c2c2351419d3d97c449d83ef0979b33d6e558baf5351e93
+Voyager   https://goerli.voyager.online/contract/0x03b1830a4caa6fff6c2c2351419d3d97c449d83ef0979b33d6e558baf5351e93
+
+Transaction hash: 1463457636285242134365034201460928933565009201250909501098996560043070244342
+StarkScan https://testnet.starkscan.co/tx/0x033c49a4a8656192eb61b1c6c77c02e314e12d72527f49f7cf76b56c84f4c5f6
+Voyager   https://goerli.voyager.online/tx/0x033c49a4a8656192eb61b1c6c77c02e314e12d72527f49f7cf76b56c84f4c5f6
+
+
+
+
+/////////////STUDENT.CAIRO RECEIPTS////////////////
+Class hash: 0x051dd2a2c7d2e4cf431dfe085e0a1dcd8944028eae41ca4f584244ad72107a6e
+StarkScan https://testnet.starkscan.co/class/0x051dd2a2c7d2e4cf431dfe085e0a1dcd8944028eae41ca4f584244ad72107a6e
+Voyager   https://goerli.voyager.online/class/0x051dd2a2c7d2e4cf431dfe085e0a1dcd8944028eae41ca4f584244ad72107a6e
+
+Transaction hash: 0x0732a1e72aa034a3aa5f737d8ad164ce66f97604d75c27a7fd91b47fd894890b
+StarkScan https://testnet.starkscan.co/tx/0x0732a1e72aa034a3aa5f737d8ad164ce66f97604d75c27a7fd91b47fd894890b
+Voyager   https://goerli.voyager.online/tx/0x0732a1e72aa034a3aa5f737d8ad164ce66f97604d75c27a7fd91b47fd894890b
+
+
+Invoke transaction was sent to the Universal Deployer Contract.                       
+Contract address: 0x04900e785147375a6f0c8e7f310a150321a49bb84c364384cc5927cf1f5ddc86
+StarkScan https://testnet.starkscan.co/contract/0x04900e785147375a6f0c8e7f310a150321a49bb84c364384cc5927cf1f5ddc86
+Voyager   https://goerli.voyager.online/contract/0x04900e785147375a6f0c8e7f310a150321a49bb84c364384cc5927cf1f5ddc86
+
+Transaction hash: 1701188319798213441514074928382771112473596965787690726715879038640311096119
+StarkScan https://testnet.starkscan.co/tx/0x03c2d6a5caf070cd4104864fa9f9031a313f23b5ae3af5d87c32937ab3a1d337
+Voyager   https://goerli.voyager.online/tx/0x03c2d6a5caf070cd4104864fa9f9031a313f23b5ae3af5d87c32937ab3a1d337
+
+
+
+/////////////BANK.CAIRO RECEIPTS////////////////
+Class hash: 0x053c1ce77ab14e9b80f4e9ff89fb155170c907877bba3da87836896e5cbf1223
+StarkScan https://testnet.starkscan.co/class/0x053c1ce77ab14e9b80f4e9ff89fb155170c907877bba3da87836896e5cbf1223
+Voyager   https://goerli.voyager.online/class/0x053c1ce77ab14e9b80f4e9ff89fb155170c907877bba3da87836896e5cbf1223
+
+Transaction hash: 0x03889a472c985820dfca376ea14f18cd0c4580ec990a78ce62a082fa4751afb7
+StarkScan https://testnet.starkscan.co/tx/0x03889a472c985820dfca376ea14f18cd0c4580ec990a78ce62a082fa4751afb7
+Voyager   https://goerli.voyager.online/tx/0x03889a472c985820dfca376ea14f18cd0c4580ec990a78ce62a082fa4751afb7
+
+//Bank Contract Address receipts
+Contract address: 0x0755384c6e70fa39816ef03134177fa113ca9ed4f9ac47d0329462326f43bcb0
+StarkScan https://testnet.starkscan.co/contract/0x0755384c6e70fa39816ef03134177fa113ca9ed4f9ac47d0329462326f43bcb0
+Voyager   https://goerli.voyager.online/contract/0x0755384c6e70fa39816ef03134177fa113ca9ed4f9ac47d0329462326f43bcb0
+
+Transaction hash: 3453762032805866050381204536004336499915402662818764618315788686355968800205
+StarkScan https://testnet.starkscan.co/tx/0x07a2c291c03dbdd06095bb0f0709a18923223bf92485edd29544b3b99903b5cd
+Voyager   https://goerli.voyager.online/tx/0x07a2c291c03dbdd06095bb0f0709a18923223bf92485edd29544b3b99903b5cd

@@ -3,8 +3,7 @@ protostar-version = "0.9.1"
 lib-path = "lib"
 
 [contracts]
-main = ["src/main.cairo"]
 state = ["src/state.cairo"]
-mapping = ["src/state.cairo"]
+bank = ["src/bank.cairo"]
 student = ["src/student.cairo"]
 
